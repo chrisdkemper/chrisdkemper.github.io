@@ -1,0 +1,175 @@
+//Colours
+
+@blue: #3587b9;
+@dblue: #183e55;
+@dgrey: #474747;
+
+body
+{
+	background: url('../img/noise.png');
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.2;
+	margin: 0;
+	padding: 0;
+}
+
+a
+{
+	color: @blue;
+	text-decoration: none;
+	&:hover
+	{
+		color: @dblue;
+	}
+}
+
+img
+{
+	border: 0 none;
+}
+
+h1,
+h2 { font-size: 1.15em; font-weight: 600; margin: 0 0 1em; }
+
+.dot
+{
+	background: @blue;
+	#border-radius.rounded(5px);
+	display: block;
+	height: 10px;
+	margin: 0 auto 50px;
+	width: 10px;
+}
+
+header
+{
+	background: @dgrey;
+	border-bottom: 10px solid @blue;
+	height: 140px;
+	margin-bottom: 135px;
+	position: relative;
+
+	.inner
+	{
+		background: @blue;
+		#border-radius.bottom(85px);
+		bottom: -95px;
+		height: 85px;
+		left: 50%;
+		margin-left: -85px;
+		position: absolute;
+		width: 170px;
+
+		.cow
+		{
+			background: #FFF url('../img/cow.png') center center no-repeat;
+			#border-radius.rounded(75px);
+			.transition(all .2s linear);
+			display: block;
+			height: 150px;
+			margin: -75px auto 1em;
+			width: 150px;
+		}
+
+		.me
+        {
+            background-image: url('../img/me.png?dss');
+        }
+	}
+}
+
+article
+{
+	text-align: center;
+	margin: 0 auto 1em;
+	padding: 0 1em	;
+	max-width: 700px;
+	p
+	{
+		line-height: 1.35;
+		margin: 0 auto 1em;
+		width: 80%;
+	}
+
+	.work
+	{
+		.item
+		{
+			background: #888;
+			border: 10px solid #666;
+			#border-radius.rounded(.5em);
+			.inline-block();
+			.min-height(80px);
+			max-width: 280px;
+			padding: 30px;
+			position: relative;
+			vertical-align: top;
+			width: 200px;
+
+			img
+			{
+				.inline-block();
+				max-width: 100%;
+			}
+
+			&:hover
+			{
+				background: #777;
+				.transition();
+			}
+
+			span
+			{
+				.transition();
+				background: #FFF;
+				left: 0;
+				padding: 30px;
+				position: absolute;
+				top: 0;
+			}
+		}
+		.hire
+		{
+			background: #fff;
+			font-size: 0.85em;
+			.min-height(80px);
+			padding: 30px;
+
+			&:hover
+			{
+				background: #f9f9f9;
+			}
+
+			h3
+			{
+				color: @blue;
+				margin: 0 0 1em;
+			}
+			p
+			{
+				margin: 0;
+				width: 100%;
+			}
+		}
+		.item + .item
+		{
+			margin-left: 1em;	
+		}
+	}
+}
+
+@media only screen and (max-width: 610px) 
+{
+	article
+	{
+		.work
+		{
+			.item + .item
+			{
+				margin: 1em 0 0;	
+			}
+		}
+	}    
+}
