@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beginning Neo4j by Chris Kemper</title>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+    <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT|PT+Serif|Playfair+Display|Noto+Serif' rel='stylesheet' type='text/css'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Serif', serif;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Old Standard TT', serif;
+        }
+
+        h2 {
+            color: #666;
+        }
+
+        hr {
+            background: #666;
+            border: 0 none;
+            height: 1px;
+            margin: 3em auto;
+        }
+
+        .hr--small {
+            width: 75px;
+        }
+
+        .hr--medium {
+            width: 150px;
+        }
+
+        .img--center {
+            display: block;
+            margin: 2em auto;
+        }
+
+        .logo--container {
+
+        }
+
+        .logo {
+            background: url('img/logo.png') center center no-repeat;
+            border: 1px solid #ddd;
+            border-radius: 75px;
+            display: block;
+            height: 150px;
+            margin: 2em auto;
+            width: 150px;
+        }
+
+        .img--book-cover {
+            border-bottom: 1px solid #eee;
+            display: block;
+            margin: 0 0 1.5em;
+            padding-bottom: 1.5em;
+            max-width: 100%;
+        }
+
+        .container {
+            max-width: 1000px;
+        }
+
+        .a--find-out-more {
+            display: block;
+            margin-bottom: 1em;
+        }
+
+        .resource--link {
+            display: block;
+            margin-bottom: 1em;
+        }
+
+        .resource--desc {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .a--find-out-more {
+                margin: 0 auto 1em;
+                max-width: 50%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .img--book-cover {
+                margin: 0 auto 1.5em;
+                max-width: 50%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a class="logo--container" href="#"><span class="logo"></span></a>
+                <h1 class="text-center">Beginning Neo4j</h1>
+                <h2 class="text-center">by Chris Kemper</h2>
+                <hr class="hr--small">
+                <p class="lead text-center">This is the microsite to accompny <a href="http://www.amazon.co.uk/gp/product/1484212282/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=1484212282&linkCode=as2&tag=chrisdkemper-21">Beginning Neo4j</a>, a book to help get you up and running in the world of graph databases and connected data.</p>
+                <hr class="hr--medium">
+            </div>
+        </div>
+    </div>
+    <div class="container main">
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <img class="img--book-cover" src="img/cover.jpg" />
+                <a class="btn btn-default a--find-out-more" href="http://www.amazon.co.uk/gp/product/1484212282/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=1484212282&linkCode=as2&tag=chrisdkemper-21"><span class="glyphicon glyphicon-search"></span> Check it out</a>
+            </div>
+            <div class="col-sm-6 col-md-9">
+                <p class="">When a tech book gets published there can sometimes be issues with code samples no longer working, or for certain parts to no longer be relevant.</p>
+
+                <p class="">As mentioned in the book, I'll be doing my best to keep as much of the book as up-to-date as possible, by storing code on <a href="https://github.com/chrisdkemper">GitHub</a>. The samples in question will either be Gists or repositories, depending on whats appropriate.</p>
+                <p class="">On a per-chapter basis, anything relevant will be listed, whether that's a link to a repository or a Gist.<!--, or a web address.--> If there are any big changes, these will be explained and dated as appropriate.</p>
+
+                <h3>Chapter 5</h3>
+                <p class="resource--desc">Social code example</p>
+                <span class="resource--link"><a href="https://gist.github.com/chrisdkemper/8c981b759275ec36d3bf">social-example-beginnning-neo4j.cql</a></span>
+                <p class="resource--desc">Ecommerce example</p>
+                <span class="resource--link"><a href="https://gist.github.com/chrisdkemper/794416dbae1bb17942b1">ecommerce-example-beginnning-neo4j.cql</a></span>
+
+                <h3>Chapter 8</h3>
+                <p class="resource--desc">The link to the source code for the application.</p>
+                <span class="resource--link"><a href="https://github.com/chrisdkemper/sample-neo4j-php-application">https://github.com/chrisdkemper/sample-neo4j-php-application</a></span>
+
+                <h3>Chapter 9</h3>
+                <p class="resource--desc">Although it's not listed, here is a Gist to install Neo4j on a server:</p>
+                <span class="resource--link"><a href="https://gist.github.com/chrisdkemper/b2ed13594160d4a70d34">install-neo4j-server-ubuntu-beginning-neo4j.bash</a></span>
+
+                <p>If you were hoping to find something that isn't listed here, please <a href="mailto:hey@chrisdkemper.co.uk">get in touch</a> and I'll do my best to either assist you with your query, or update the site with new information. Equally, if you think something should be here and isn't, let me know and I'll (hopefully) remedy that for you.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
